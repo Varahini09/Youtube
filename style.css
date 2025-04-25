@@ -1,0 +1,57 @@
+body{
+  margin: 0;
+}
+p{
+  font-family:Roboto,Arial, Helvetica, sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.thumbnail{
+  margin-bottom: 12px;
+}
+.thumb{
+  width: 100%;
+ 
+}
+.title{
+  font-size: 14px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.video{
+
+}
+.profile{
+  display: inline-block;
+  width: 50px;
+  vertical-align: top;
+  background-color: bisque;
+}
+.video-info{
+  display: inline-block;
+  width: 400px;
+  background-color: bisque;
+}
+.pro{
+  width:40px;
+ border-radius: 50px;
+
+}
+.sub,
+.sub1{
+  font-size: 12px;
+  color: rgb(63, 62, 62);
+
+}
+.sub{
+  margin-bottom: 4px;
+}
+.video-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
