@@ -5,28 +5,87 @@
  
 }
 .left{
-  background-color: lightblue;
-width: 150px;
 display: flex;
 align-items: center; 
 
 }
 .center{
-  background-color: lightpink;
+ 
   flex: 1;
   margin-left: 70px;
   margin-right: 35px;
   max-width: 500px;
+  display: flex;
+  align-items: center;
 }
 .right{
-  background-color: lightblue;
-  width: 200px;
+  margin-right: 24px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: space-between;
 } 
 .ham{
   height: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 .logo{
   height: 20px;
+}
+.search{
+  flex: 1;
+  width: 0;
+  height: 36px;
+  font-size: 16px;
+  padding-left: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
+  border-color: rgb(241, 237, 237);
+}
+.search::placeholder{
+ font-family: Arial, Helvetica, sans-serif;
+
+}
+.si{
+  height: 30px;
+ margin-top: 4px;
+}
+.searchb{
+   height: 40px;
+   width:66px ; 
+   background-color: rgb(237, 238, 239);
+   border-style: solid;
+   border-width: 1px;
+   border-color: rgb(241, 237, 237);
+   margin-left: -1px;
+   margin-right: 4px;
+}.voice{
+  height: 24px;
+  margin-top: 4px;
+  
+}
+.voicei{
+height: 40px;
+width: 40px;
+border-style: none;
+border-radius: 20px;
+background-color: rgb(245, 245, 245);
+}
+
+.uploadicons{
+ height: 24px;
+}
+.youtbeicons{
+height: 24px;
+}
+.notifiicon{
+height: 24px;
+}
+.chanicon{
+height: 34px;
+border-radius: 16px;
 }
