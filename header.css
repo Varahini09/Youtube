@@ -11,6 +11,7 @@
   border-bottom-style: solid;
   border-bottom-color: lightgray;
   
+  
 }
 .left{
 display: flex;
@@ -96,4 +97,22 @@ height: 24px;
 .chanicon{
 height: 34px;
 border-radius: 16px;
+}
+.noticon{
+position: relative;
+}
+.timenoti{
+position: absolute;
+top: -5px;
+right: -5px;
+background-color: rgb(231, 29, 29)
+;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+padding-top: 2px;
+padding-bottom: 2px;
+border-radius: 10px;
 }
