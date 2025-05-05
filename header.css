@@ -61,7 +61,7 @@ align-items: center;
 }
 .si{
   height: 30px;
- margin-top: 4px;
+ 
 }
 .searchb{
    height: 40px;
@@ -71,10 +71,50 @@ align-items: center;
    border-width: 1px;
    border-color: rgb(241, 237, 237);
    margin-left: -1px;
-   margin-right: 4px;
-}.voice{
+   margin-right: 10px;
+  
+}
+.searchb,.voicei,
+ .upload, .yotube,
+ .noticon{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchb .tooltip,
+.voicei .tooltip,
+.upload .tooltip,
+.yotube .tooltip,
+.noticon .tooltip{
+  position: absolute;
+  background-color: rgb(196, 196, 196);
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+ pointer-events: none;
+ white-space: nowrap;
+
+}
+.searchb:hover .tooltip,
+.voicei:hover .tooltip,
+.upload:hover .tooltip,
+.yotube:hover .tooltip,
+.noticon:hover .tooltip
+{
+opacity: 1;
+}
+
+.voice{
   height: 24px;
-  margin-top: 4px;
+  
   
 }
 .voicei{
