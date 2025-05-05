@@ -17,7 +17,7 @@ p{
 }
 .thumb{
   width: 100%;
-  
+  cursor: pointer;
 }
 .title{
   font-size: 14px;
@@ -34,7 +34,33 @@ p{
   display: inline-block;
   width: 50px;
   vertical-align: top;
+  cursor: pointer;
   
+}
+.profile{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile .tooltips{
+  position: absolute;
+  padding-top:4px ;
+  padding-bottom:4px ;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+ pointer-events: none;
+ white-space: nowrap;
+}
+.profile:hover .tooltips{
+  opacity: 1;
 }
 .video-info{
   display: inline-block;
