@@ -15,12 +15,42 @@
  <button onclick="cartQuantity=cartQuantity+3;
  console.log(`Cart quantity: ${cartQuantity}`)
  ">+3</button>
+ <button onclick="cartQuantity=cartQuantity+4;
+ console.log(`Cart quantity: ${cartQuantity}`)
+ ">+4</button>
+ <button onclick="cartQuantity=cartQuantity+5;
+ console.log(`Cart quantity: ${cartQuantity}`)
+ ">+5</button>
+  
+  <button onclick="cartQuantity=cartQuantity-5;
+  console.log(`Cart quantity: ${cartQuantity}`)
+  ">-5</button>
  <button onclick="cartQuantity=0;
  console.log('cart is reset');
  console.log(`cart Quantity: ${cartQuantity}`);" > Reset Cart</button>
  
+ 
  <script>
 let cartQuantity=0;
+ 
+     let variable = name;
+     console.log(typeof variable);
+
+    variable = 'ABC';
+     console.log(`My name: ${variable}`);
+  
+     let coffee=5;
+     let bagles=3*2;
+     let soup =9;
+     let cost = coffee+ bagles+ soup;
+     
+     console.log(`cost:$${cost}`);
+      
+     const tax= cost*0.1;
+     console.log(`Tax:$${tax}`);
+
+     let total=cost+tax;
+     console.log(`total cost with tax:$${total}`);
 
   </script>
 </body>
