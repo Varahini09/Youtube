@@ -4,21 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dom</title>
+  <style>
+     body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10000px;
+ }
+ .subscribe-button{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 10px 15px 10px 15px;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 20px;
+ }
+.is-subscribed{
+background-color: rgb(236, 236, 236);
+color: black;
+}
+
+ .js-cal{
+  background-color: rgb(20, 124, 34);
+  padding: 11px;
+  font-size: 18px;
+  border-radius: none;
+  border-style: none;
+  color: white;
+  cursor: pointer;
+ }
+ .cost-input{
+  font-size: 15px;
+  padding: 10px 10px 10px 10px;
+ }
+
+
+  </style>
 </head>
 <body>
   <p>YouTube Subscribe Button</p>
   <button onclick="sub()
- "class="js-subscribe-button">Subscribe</button>
+ "class="js-subscribe-button subscribe-button">Subscribe</button>
 <p>RockPaperSicssor</p>
 <a href="http://127.0.0.1:5501/09-rockpaperscissor.html">click here</a>
 
 <p>Amazon shipping calculator</p>
 <p>Orders unders $40 =+$10 shipping.</p>
 <p>Orders above $40 = FREE shipping.</p>
-<input placeholder="Cost of order" class="js-cost-input"
+<input placeholder="Cost of order" class="js-cost-input cost-input"
 onkeydown="handleCostKeydown(event);" >
 <button onclick="
-calculateTotal();
+calculateTotal(); "class="js-cal
 ">calculate</button>
 <p class="js-total-cost"></p>
  
@@ -57,9 +93,11 @@ const buttonELement=
  document.querySelector('.js-subscribe-button');
  if(buttonELement.innerHTML==='subscribe'){
 buttonELement.innerHTML ='subscribed';
+buttonELement.classList.add('is-subscribed');
  }
  else{
   buttonELement.innerHTML='subscribe';
+  buttonELement.classList.remove('is-subscribed');
  }
  }
 

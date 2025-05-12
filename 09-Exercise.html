@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="clickfunction()
+  "class="js-button">9a</button>
+
+  <button onclick="clicknext()
+  "class="js-next">9b</button>
+  <br><br>
+
+  <button onclick="
+  document.querySelector('.js-total').innerHTML='you choose: head';
+  ">heads</button>
+
+  <button onclick="tails()
+  ">tails</button>
+
+  <p class="js-total"></p>
+
+  <input placeholder="Enter name" class="js-input"
+   onkeydown="
+        if (event.key === 'Enter') {
+          call();
+        }">
+  <button onclick="
+ 
+call()
+  ">Enter</button>
+  <p class="js-enter"></p>
+
+  <input placeholder="Type mes....." class="js-type" 
+   onkeyup="
+        const inputElement = document.querySelector('.js-type');
+        document.querySelector('.js-out')
+          .innerHTML = inputElement.value;
+  ">
+
+<p class="js-out"></p>
+<h3>
+  Cart 
+</h3>
+  <button onclick="
+      displayCartQuantity();
+    ">Show Quantity</button>
+
+    <button onclick="
+      updateCartQuantity(1);
+    ">Add to Cart</button>
+
+    <button onclick="
+      updateCartQuantity(2);
+    ">+2</button>
+
+    <button onclick="
+      updateCartQuantity(3);
+    ">+3</button>
+
+    <button onclick="
+      updateCartQuantity(4);
+    ">+4</button>
+
+    <button onclick="
+      updateCartQuantity(5);
+    ">+5</button>
+
+    <button onclick="
+      updateCartQuantity(-1);
+    ">Remove from cart</button>
+
+    <button onclick="
+      updateCartQuantity(-2);
+    ">-2</button>
+
+    <button onclick="
+      updateCartQuantity(-3);
+    ">-3</button>
+
+    <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset.');
+
+
+      displayCartQuantity();
+    ">Reset Cart</button>
+
+    <p class="js-cart-quantity"></p>
+
+
+  <script>
+  function clickfunction(){
+    console.log(document.querySelector('.js-button'));
+  }
+  function clicknext(){
+    console.log('9b done!');
+  }
+
+  function tails(){
+    document.querySelector('.js-total').innerHTML='you choose: tails';
+  }
+function call(){
+ const inputElement= document.querySelector('.js-input');
+  document.querySelector('.js-enter').innerHTML=`your name is ${inputElement.value}`;
+}
+//Cart Quantity Excerise 
+  let cartQuantity = 0;
+
+      
+      displayCartQuantity();
+
+      function updateCartQuantity(change) {
+        if (cartQuantity + change > 10) {
+          alert('The cart is full');
+          return;
+        }
+
+        if (cartQuantity + change < 0) {
+          alert('Not enough items in the cart');
+          return;
+        }
+
+        cartQuantity += change;
+
+       
+        displayCartQuantity();
+      }
+
+      function displayCartQuantity() {
+        document.querySelector('.js-cart-quantity')
+          .innerHTML = `Cart quantity: ${cartQuantity}`;
+      }
+  
+  </script>
+</body>
+</html>
