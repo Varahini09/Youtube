@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10th Exercise</title>
+  <style>
+    body{
+      margin-bottom: 1000px;
+    }
+.Add{
+  background-color: rgb(255, 216, 20);
+  border: none;
+  padding: 10px;
+  width: 200px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.now{
+  background-color: black;
+  color: white;
+  width: 200px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 19px;
+  border: none;
+  height: 50px;
+  cursor: pointer;
+}
+.late{
+  background-color: lightgray;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.toggle-button{
+background-color: lightgray;
+border: none;
+width: 100px;
+height: 50px;
+border-radius: 20px;
+font-size: 17px;
+font-weight: bold;
+cursor: pointer;
+}
+.is-toggled{
+  background-color: black;
+  color: white;
+}
+ .js-cal{
+  background-color: rgb(20, 124, 34);
+  padding: 11px;
+  font-size: 18px;
+  border-radius: none;
+  border-style: none;
+  color: white;
+  cursor: pointer;
+ }
+  .cost-input{
+  font-size: 15px;
+  padding: 10px 10px 10px 10px;
+ }
+ .error-message {
+        color: red;
+      }
+
+  </style>
+</head>
+<body>
+  <button class="Add">Add to Cart</button> <br>
+  <button class="now">Request now</button>
+  <button class="late">Schedule for later</button> <br>
+  <button class="js-buttons">Test</button><br><br>
+
+   <button class="toggle-button js-button" onclick="
+     game1()
+    ">Gaming</button>
+
+    <button class="toggle-button js-button2" onclick="
+      game2()
+    ">Music</button>
+
+    <button class="toggle-button js-button3" onclick="
+      game3()
+    ">Tech</button> <br> <br>
+
+    <input placeholder="Cost of order" class="js-cost-input cost-input"
+onkeydown="handleCostKeydown(event);" >
+<button onclick="
+calculateTotal(); "class="js-cal
+">calculate</button>
+<p class="js-total-cost"></p>
+    <p class="js-error-message error-message"></p>
+
+
+  <script>
+    const button=document.querySelector('.js-buttons');
+    console.log(button.classList.contains('js-buttons'));
+
+    function game1(){
+       const button = document.querySelector('.js-button');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    }
+    function game2(){
+const button = document.querySelector('.js-button2');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    }
+    function game3(){
+const button = document.querySelector('.js-button3');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    }
+
+    function handleCostKeydown(event){
+console.log(event.key);
+if(evemt.key==='enter'){
+  calculateTotal();
+}
+}
+
+
+  function calculateTotal(){
+  const inputElement= document.querySelector('.js-cost-input');
+  let cost= Number( inputElement.value);
+  document.querySelector('.js-total-cost').innerHTML='';
+    document.querySelector('.js-error-message').innerHTML='';
+  if(cost<0){
+    document.querySelector('.js-error-message').innerHTML='Error: cost cannot be less than$0';
+    return;
+  }
+  if(cost<40){ 
+  cost=cost+10;
+
+  }
+  document.querySelector('.js-total-cost').innerHTML=`$${cost}`;
+  }
+  </script>
+</body>
+</html>
